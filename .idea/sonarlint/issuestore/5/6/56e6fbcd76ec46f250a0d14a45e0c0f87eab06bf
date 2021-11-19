@@ -1,0 +1,9 @@
+
+U	java:S106"9Replace this use of System.out or System.err by a logger.(∞ÈÙ∫8®»”∆”/
+]	java:S125"<This block of commented-out lines of code should be removed.(Ó˚Æƒ˚ˇˇˇˇ8¡»”∆”/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(£—ôµ˚ˇˇˇˇ8—»”∆”/
+i
+java:S2677"LUse or store the value returned from "readLine" instead of throwing it away.(ªì†∑8·»”∆”/
+Z	java:S106*"9Replace this use of System.out or System.err by a logger.(©Œ˚≠¸ˇˇˇˇ8Â»”∆”/
+Z	java:S106+"9Replace this use of System.out or System.err by a logger.(ûÉ´î˘ˇˇˇˇ8Ê»”∆”/
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ç£Ù˝¸ˇˇˇˇ8»”∆”/
