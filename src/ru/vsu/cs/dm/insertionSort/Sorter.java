@@ -1,6 +1,6 @@
 package ru.vsu.cs.dm.insertionSort;
 
-public abstract class Sorter <T extends Comparable<T>>{
+public abstract class Sorter<T extends Comparable<T>> {
     protected int comparisonsCounter = 0;
     private final StringBuilder comparisonsLog = new StringBuilder();
 

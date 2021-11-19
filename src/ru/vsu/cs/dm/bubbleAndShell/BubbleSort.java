@@ -18,7 +18,6 @@ public class BubbleSort {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         in.readLine();
     }
-    
 
     public static void bubbleSort(int[] array) {
         boolean swap = true;
