@@ -11,7 +11,7 @@ public class BinaryInsertionSort<T extends Comparable<T>> extends Sorter<T> {
 
     public static void main(String[] args) throws IOException {
         Integer[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
-        //Integer[] array = {10, 2, 6, 3, 1, 7, 5, 9, 4, 15, 11, 21, 8, 12, 13, 12, 31, 43, 21, 56};
+        //Integer[] array = {10, 2, 6, 3, 1, 7, 5, 9, 1, 15, 11, 21, 2, 12, 13, 12, 31, 43, 21, 56};
         //Integer[] array = {20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
         System.out.println("The input array: " + Arrays.toString(array));
@@ -55,6 +55,5 @@ public class BinaryInsertionSort<T extends Comparable<T>> extends Sorter<T> {
                 array[leftBorder] = key;
             }
         }
-
     }
 }
