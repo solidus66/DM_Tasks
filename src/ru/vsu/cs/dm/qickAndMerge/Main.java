@@ -16,7 +16,7 @@ public class Main {
         MergeSort mergeSort = new MergeSort();
         QuickSort quickSort = new QuickSort();
 
-        int size = 15;
+        int size = 16;
         int[] array;
         printArrayStartInfo();
         int answer = readAnswer();
@@ -58,15 +58,15 @@ public class Main {
     }
 
     private static int[] sortedArray() {
-        return new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        return new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
     }
 
     private static int[] unSortedArray() {
-        return new int[]{10, 2, 6, 3, 1, 7, 5, 9, 4, 15, 11, 21, 8, 12, 13};
+        return new int[]{10, 2, 6, 3, 1, 7, 5, 9, 4, 15, 11, 21, 8, 12, 13, 16};
     }
 
     private static int[] backSortedArray() {
-        return new int[]{15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+        return new int[]{16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     }
 
     private static void printArray(int[] array2Print) {
