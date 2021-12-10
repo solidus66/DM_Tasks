@@ -5,6 +5,7 @@ public class MergeSort {
     private int countComparison = 0;
     private int swapCount = 0;
 
+
     public int[] sort(int[] a, int arrSize) {
         if (arrSize < 2) {
             return a;
@@ -47,6 +48,7 @@ public class MergeSort {
                 a[k++] = l[i++];
             } else {
                 a[k++] = r[j++];
+                this.swapCount++;
             }
         }
         while (i < left) {
@@ -55,6 +57,5 @@ public class MergeSort {
         while (j < right) {
             a[k++] = r[j++];
         }
-        this.swapCount++;
     }
 }

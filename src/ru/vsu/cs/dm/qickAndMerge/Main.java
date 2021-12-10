@@ -22,34 +22,33 @@ public class Main {
         int answer = readAnswer();
 
         switch (answer) {
-            case 1:
+            case 1 -> {
                 array = sortedArray();
                 printArray(array);
                 printMergeSortResult(array, size, mergeSort);
-                printQuickSortResult(array, 0, size - 1, quickSort);
-                break;
-
-            case 2:
+                printQuickSortResult(array, size - 1, quickSort);
+            }
+            case 2 -> {
                 array = unSortedArray();
                 printArray(array);
                 printMergeSortResult(array, size, mergeSort);
-                printQuickSortResult(array, 0, size - 1, quickSort);
-                break;
-
-            case 3:
+                printQuickSortResult(array, size - 1, quickSort);
+            }
+            case 3 -> {
                 array = backSortedArray();
                 printArray(array);
                 printMergeSortResult(array, size, mergeSort);
-                printQuickSortResult(array, 0, size - 1, quickSort);
-                break;
+                printQuickSortResult(array, size - 1, quickSort);
+            }
         }
     }
 
     private static void printArrayStartInfo() {
         System.out.println();
-        System.out.println("Select '1' to pick sorted array \n" +
-                "Select '2' to pick unsorted array \n" +
-                "Select '3' to pick back sorted array");
+        System.out.println("""
+                Select '1' to pick sorted array\s
+                Select '2' to pick unsorted array\s
+                Select '3' to pick back sorted array""");
     }
 
     private static int readAnswer() {
@@ -59,18 +58,15 @@ public class Main {
     }
 
     private static int[] sortedArray() {
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-        return array;
+        return new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
     }
 
     private static int[] unSortedArray() {
-        int[] array = {10, 2, 6, 3, 1, 7, 5, 9, 4, 15, 11, 21, 8, 12, 13};
-        return array;
+        return new int[]{10, 2, 6, 3, 1, 7, 5, 9, 4, 15, 11, 21, 8, 12, 13};
     }
 
     private static int[] backSortedArray() {
-        int[] array = {15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-        return array;
+        return new int[]{15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     }
 
     private static void printArray(int[] array2Print) {
@@ -88,10 +84,10 @@ public class Main {
         System.out.println("The number of swaps: " + mergeSort.getSwapCount());
     }
 
-    private static void printQuickSortResult(int[] arr, int begin, int end, QuickSort quickSort) {
+    private static void printQuickSortResult(int[] arr, int end, QuickSort quickSort) {
         System.out.println("\n");
         System.out.println(ANSI_CYAN + "Array sorted with Quick Sort: " + ANSI_RESET);
-        System.out.println(Arrays.toString(quickSort.sort(arr, begin, end)));
+        System.out.println(Arrays.toString(quickSort.sort(arr, 0, end)));
 
         System.out.println("The number of comparisons: " + quickSort.getCountComparison());
         System.out.println("The number of swaps: " + quickSort.getSwapCount());

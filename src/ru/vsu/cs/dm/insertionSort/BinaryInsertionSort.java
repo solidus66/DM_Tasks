@@ -42,8 +42,7 @@ public final class BinaryInsertionSort {
 
             if (array[i] < array[mid]) {
                 int t = array[i];
-                for (int k = i; k > mid; k--)
-                    array[k] = array[k - 1];
+                if (i - mid >= 0) System.arraycopy(array, mid, array, mid + 1, i - mid);
                 array[low] = t;
             }
         }
