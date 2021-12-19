@@ -3,7 +3,7 @@ package ru.vsu.cs.dm.qickAndMerge;
 public class MergeSort {
 
     private int countComparison = 0;
-    private int swapCount = 0;
+//    private int swapCount = 0;
 
     public int[] sort(int[] a, int arrSize) {
         if (arrSize < 2) {
@@ -35,17 +35,17 @@ public class MergeSort {
             } else {
                 a[k] = r[j++];
             }
-            this.swapCount++;
+//            this.swapCount++;
             k++;
         }
 
         while (i < left) {
             a[k++] = l[i++];
-            this.swapCount++;
+//            this.swapCount++;
         }
         while (j < right) {
             a[k++] = r[j++];
-            this.swapCount++;
+//            this.swapCount++;
         }
     }
 
@@ -53,7 +53,7 @@ public class MergeSort {
         return countComparison;
     }
 
-    public int getSwapCount() {
-        return swapCount;
-    }
+//    public int getSwapCount() {
+//        return swapCount;
+//    }
 }

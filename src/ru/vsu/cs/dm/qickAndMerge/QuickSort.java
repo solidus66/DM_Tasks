@@ -3,7 +3,7 @@ package ru.vsu.cs.dm.qickAndMerge;
 public class QuickSort {
 
     private int countComparison = 0;
-    private int swapCount = 0;
+//    private int swapCount = 0;
 
     public int[] sort(int[] arr, int begin, int end) {
         if (begin < end) {
@@ -30,7 +30,7 @@ public class QuickSort {
         int swapTemp = arr[i + 1];
         arr[i + 1] = arr[end];
         arr[end] = swapTemp;
-        this.swapCount++;
+//        this.swapCount++;
 
         return i + 1;
     }
@@ -39,7 +39,7 @@ public class QuickSort {
         return countComparison;
     }
 
-    public int getSwapCount() {
-        return swapCount;
-    }
+//    public int getSwapCount() {
+//        return swapCount;
+//    }
 }

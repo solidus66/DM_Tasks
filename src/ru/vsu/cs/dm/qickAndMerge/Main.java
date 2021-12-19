@@ -29,7 +29,7 @@ public class Main {
                 printQuickSortResult(array, size - 1, quickSort);
             }
             case 2 -> {
-                array = unSortedArray();
+                array = unSortedArray(size);
                 printArray(array);
                 printMergeSortResult(array, size, mergeSort);
                 printQuickSortResult(array, size - 1, quickSort);
@@ -61,8 +61,13 @@ public class Main {
         return new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
     }
 
-    private static int[] unSortedArray() {
-        return new int[]{10, 2, 6, 3, 1, 7, 5, 9, 4, 15, 11, 21, 8, 12, 13, 16};
+    private static int[] unSortedArray(int size) {
+//        return new int[]{110, 2, 66, 3, 31, 78, 5, 9, 4, 15, 11, 21, 8, 12, 13, 16};
+        int[] array = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) Math.round((Math.random() * 100));
+        }
+        return array;
     }
 
     private static int[] backSortedArray() {
@@ -81,7 +86,7 @@ public class Main {
         System.out.println(Arrays.toString(mergeSort.sort(arr, size)));
 
         System.out.println("The number of comparisons: " + mergeSort.getCountComparison());
-        System.out.println("The number of swaps: " + mergeSort.getSwapCount());
+//        System.out.println("The number of swaps: " + mergeSort.getSwapCount());
     }
 
     private static void printQuickSortResult(int[] arr, int end, QuickSort quickSort) {
@@ -90,6 +95,6 @@ public class Main {
         System.out.println(Arrays.toString(quickSort.sort(arr, 0, end)));
 
         System.out.println("The number of comparisons: " + quickSort.getCountComparison());
-        System.out.println("The number of swaps: " + quickSort.getSwapCount());
+//        System.out.println("The number of swaps: " + quickSort.getSwapCount());
     }
 }
