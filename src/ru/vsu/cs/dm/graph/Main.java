@@ -1,6 +1,5 @@
 package ru.vsu.cs.dm.graph;
 
-
 import ru.vsu.cs.dm.graph.dijkstraAlgorithm.DijkstraSolution;
 import ru.vsu.cs.dm.graph.goAroundInDepth.DepthSolution;
 
