@@ -50,7 +50,7 @@ public class Graph {
             }
         }
 
-        for (int j = 0; j < nVerts; j++) {  // сброс флагов
+        for (int j = 0; j < nVerts; j++) {
             vertexArray[j].wasVisited = false;
         }
 
@@ -59,7 +59,7 @@ public class Graph {
     private int getAdjUnvisitedVertex(int v) {
         for (int j = 0; j < nVerts; j++) {
             if (adjMat[v][j] == 1 && !vertexArray[j].wasVisited) {
-                return j; //возвращает первую найденную вершину
+                return j;
             }
         }
         return -1;
