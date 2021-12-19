@@ -5,7 +5,7 @@ public class DijkstraSolution {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_RESET = "\u001B[0m";
 
-    public static void main(String[] args) {
+    public static void main() {
         Graph graph = new Graph();
         graph.addVertex('A');
         graph.addVertex('B');

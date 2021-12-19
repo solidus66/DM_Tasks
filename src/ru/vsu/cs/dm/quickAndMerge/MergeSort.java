@@ -1,4 +1,4 @@
-package ru.vsu.cs.dm.qickAndMerge;
+package ru.vsu.cs.dm.quickAndMerge;
 
 public class MergeSort {
 
