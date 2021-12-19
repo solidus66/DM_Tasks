@@ -11,20 +11,16 @@ public class Main {
     public static final String ANSI_CYAN = "\u001B[36m";
 
     public static void main(String[] args) {
-        init();
+        run();
     }
 
-    private static void init() {
+    private static void run() {
         printStartInfo();
         int answer = readAnswer();
 
         switch (answer) {
-            case 1 -> {
-                DepthSolution.main();
-            }
-            case 2 -> {
-                DijkstraSolution.main();
-            }
+            case 1 -> DepthSolution.main();
+            case 2 -> DijkstraSolution.main();
         }
     }
 

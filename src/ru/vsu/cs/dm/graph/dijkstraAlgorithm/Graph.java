@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Graph {
-    private final int MAX_VERTS = 10;
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_RESET = "\u001B[0m";
+
     private final int INFINITY = 100000000;
-    private Vertex vertexList[];
-    private int relationMatrix[][];
+    private final Vertex[] vertexList;
+    private final int[][] relationMatrix;
     private int countOfVertices;
     private int countOfVertexInTree;
     private List<Path> shortestPaths;
@@ -15,6 +17,7 @@ public class Graph {
     private int startToCurrent;
 
     public Graph() {
+        int MAX_VERTS = 10;
         vertexList = new Vertex[MAX_VERTS];
         relationMatrix = new int[MAX_VERTS][MAX_VERTS];
         countOfVertices = 0;
@@ -52,7 +55,7 @@ public class Graph {
             int minDist = shortestPaths.get(indexMin).getDistance();
 
             if (minDist == INFINITY) {
-                System.out.println("В графе пристувствуют недостижимые вершины");
+                System.out.println(ANSI_RED + "The graph contains unreachable vertices" + ANSI_RESET);
                 break;
             } else {
                 currentVertex = indexMin;
@@ -89,16 +92,13 @@ public class Graph {
     private void updateShortestPaths() {
         int vertexIndex = 1;
         while (vertexIndex < countOfVertices) {
-
             if (vertexList[vertexIndex].isInTree()) {
                 vertexIndex++;
                 continue;
             }
 
             int currentToFringe = relationMatrix[currentVertex][vertexIndex];
-
             int startToFringe = startToCurrent + currentToFringe;
-
             int shortPathDistance = shortestPaths.get(vertexIndex).getDistance();
 
             if (startToFringe < shortPathDistance) {
@@ -117,12 +117,12 @@ public class Graph {
             if (shortestPaths.get(i).getDistance() == INFINITY) {
                 System.out.println("0");
             } else {
-                String result = shortestPaths.get(i).getDistance() + " (";
+                StringBuilder result = new StringBuilder(shortestPaths.get(i).getDistance() + " (");
                 List<Integer> parents = shortestPaths.get(i).getParentVertices();
-                for (int j = 0; j < parents.size(); j++) {
-                    result += vertexList[parents.get(j)].getLabel() + " -> ";
+                for (Integer parent : parents) {
+                    result.append(vertexList[parent].getLabel()).append(" -> ");
                 }
-                System.out.println(result + vertexList[i].getLabel() + ")");
+                System.out.println(result.toString() + vertexList[i].getLabel() + ")");
             }
         }
     }
